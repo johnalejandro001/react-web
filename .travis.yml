@@ -6,4 +6,4 @@ before_install:
     - docker build -t johnalejandro001/react-web -f Dockerfile.dev .
 
 script:
-    - docker run johnalejandro001/react-web npm run test -- --coverage
+    - docker run -e CI=true johnalejandro001/react-web npm run test -- --coverage
