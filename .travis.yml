@@ -1,9 +1,10 @@
-sudo: required 
-services: 
-    - docker
-
+sudo: required
+services:
+- docker
 before_install:
-    - docker build -t johnalejandro001/react-web -f Dockerfile.dev .
-
+- docker build -t johnalejandro001/react-web -f Dockerfile.dev .
 script:
-    - docker run -e CI=true johnalejandro001/react-web npm run test -- --coverage
+- docker run -e CI=true johnalejandro001/react-web npm run test -- --coverage
+env:
+  global:
+    secure: tycpQPJbtYMOgIO244PRQBu8XkkOFTD1XDAk85RLXC2KPtB7z+MT4AB/MvNd32pO55AP0u8gDJ7mqY4bfCfF2UhTplK3PVo41B3eqSU1UvXpAcsPXC/uFuxX7CT0/XwC4YjeLTFmWvzA5FIWWA8EJya8QKtRcFQZTs5mwRY44qUt1n4aNObc8visKMA3sy0mj0Uv4jg4+aqB3Ax+NQMONTzSLYn9T/DKQjnYX+0DpTGWGT4bpEeRpQ/lw1iRXLt7YX4zpJkrgOYKdm5FeA+IF2EOPM3eSpAVHRo/5QhDLZrL8vch5krwDmpSqlBhHsJ1hKeL5t6NYSzeqTUuEncMM6QcW+Hn/u/itcc2I0SMwUVlPYlyxIbn5ugDSNfGFwSSs0E7sbwZgg6Tz2swsusO3RaVrlCHZfO5dDTK4myR4UdvGKdKxz6c5cngsOtVD/aBLuHtqOtIm7pmdg+MQjq6eyeHRQIr7bsJbbyOAYjvVFu0BKE/wn6TilS/xbpjwpURA+YmwFpHPsJvjqLiUrZnyVFyJhFUahxRiJYnfUaqraW6gpWLuBmhjVtSMkPBEYroJhDxccXyneKKqkpUTFYKbYg7LAN2lW89HuozT4wSDVmUPJMNbHeWPl0PfIYupFwb52Bx3BlHPS2rvNk02+ykJju5E9RlREsJT8sGWNXsIjw=
