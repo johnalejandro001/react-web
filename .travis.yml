@@ -6,7 +6,6 @@ openssl aes-256-cbc -K $encrypted_78b7adbb5290_key -iv $encrypted_78b7adbb5290_i
 - docker build -t johnalejandro001/react-web -f Dockerfile.dev .
 script:
 - docker run -e CI=true johnalejandro001/react-web npm run test -- --coverage
-ls - client-secret.json
 deploy:
   provider: gae
   keyfile: client-secret.json
