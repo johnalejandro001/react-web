@@ -9,6 +9,6 @@ script:
 deploy:
   provider: gae
   keyfile: client-secret.json
-  project: mineral-silicon-264703
+  project: react-web-266005
   on:
      branch: master
